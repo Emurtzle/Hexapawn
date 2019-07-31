@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 
-class index extends Component {
+class Index extends Component {
     constructor(props) {
         super(props)
 
@@ -21,4 +21,4 @@ class index extends Component {
     }
 }
 
-export default index
+export default Index
