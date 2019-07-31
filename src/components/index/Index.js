@@ -15,7 +15,8 @@ class Index extends Component {
 
         return (
             <Fragment>
-
+                <h1>Welcome To Hexapawn!</h1>
+                <h2>A.I. Without Electricity!</h2>
             </Fragment>
         )
     }
