@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react'
 
 import styled from 'styled-components'
 
+import { test } from '../../gameplay/startGame'
+
 const Body = styled.div`
   padding: 1em;
   background: blue;
@@ -63,6 +65,10 @@ class Index extends Component {
         }
     }
 
+    componentDidMount() {
+        test()
+    }
+
     openInfoSection = () => {
         this.setState({infoToggle: true})
     }
@@ -86,14 +92,14 @@ class Index extends Component {
 
         return (
             <Body>
-
+                
                 <TitleSection>
                     <Title>
                         Welcome To Hexapawn!
                     </Title>
 
                     <SubTitle>
-                        A.I. Without The Electricity!
+                        A.I. Without The Electricity! (kinda)
                     </SubTitle>
 
                     <SubText>
