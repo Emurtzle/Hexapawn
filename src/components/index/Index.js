@@ -49,18 +49,40 @@ const HistorySection = styled.section`
     background: yellow;
 `
 
+const BasicButton = styled.button`
+    type: button;
+`
+
 class Index extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-
+            infoToggle: false,
+            histToggle: false
         }
     }
 
+    openInfoSection = () => {
+        this.setState({infoToggle: true})
+    }
+
+    closeInfoSection = () => {
+        this.setState({infoToggle: false})
+    }
+
+    openHistSection = () => {
+        this.setState({histToggle: true})
+    }
+
+    closeHistSection = () => {
+        this.setState({histToggle: false})
+    }
+
+
     render () {
         // const {} = this.props
-        // const {} = this.state
+        const { infoToggle, histToggle } = this.state
 
         return (
             <Body>
@@ -79,9 +101,44 @@ class Index extends Component {
                     </SubText>
                 </TitleSection>
 
-                <InformationSection>
-                    <h1>I am the information!!!</h1>
-                </InformationSection>
+                {!infoToggle && (
+                    <BasicButton
+                        onClick={this.openInfoSection}
+                    >
+                        Information
+                    </BasicButton>
+                )}
+                
+                {infoToggle && (
+                    <InformationSection>
+                        <BasicButton
+                            onClick={this.closeInfoSection}
+                        >
+                            Close Information
+                        </BasicButton>
+                        <h1>I am the information!!!</h1>
+                    </InformationSection>
+                )}
+
+                {!histToggle && (
+                    <BasicButton
+                        onClick={this.openHistSection}
+                    >
+                        History
+                    </BasicButton>
+                )}
+
+                {histToggle && (
+                    <HistorySection>
+                        <BasicButton
+                            onClick={this.closeHistSection}
+                        >
+                            Close History
+                        </BasicButton>
+                        <h1>I am the history!!!</h1>
+                    </HistorySection>
+                )}
+                
 
                 <ControlSection>
                     <h1>I am the controls!</h1>
@@ -91,9 +148,7 @@ class Index extends Component {
                     <h1>I am the board!!!</h1>
                 </BoardSection>
 
-                <HistorySection>
-                    <h1>I am the history!!!</h1>
-                </HistorySection>
+                
 
             </Body>
         )
