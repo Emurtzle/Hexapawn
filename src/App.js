@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react'
 
+import Index from './components/index/Index'
+
 function App() {
   return (
     <Fragment>
-      <h1>Test</h1>
+      
+      <Index />
+
     </Fragment>
   );
 }
