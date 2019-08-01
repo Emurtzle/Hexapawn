@@ -1,5 +1,6 @@
 export function test() {
-    console.log("Test success!")
+    let testGrid = new grid()
+    console.log(testGrid.logGrid())
 }
 
 export function startGame() {

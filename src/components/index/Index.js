@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 
 import { test } from '../../gameplay/startGame'
+require('../../gameplay/board.js')
 
 const Body = styled.div`
   padding: 1em;
