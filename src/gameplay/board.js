@@ -122,4 +122,16 @@ class Board {
         this.lose = false
         this.pTurn = true
     }
+
+    checkWin() {
+        return this.win
+    }
+
+    checkLose() {
+        return this.lose
+    }
+
+    getPTurn() {
+        return this.pTurn
+    }
 }
