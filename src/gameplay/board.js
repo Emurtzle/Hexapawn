@@ -5,6 +5,19 @@ class pawn {
         this.xCoord = xCoord
         this.yCoord = yCoord
     }
+
+    getID() {
+        return this.id
+    }
+
+    getDead() {
+        return this.dead
+    }
+
+    getCoord() {
+        return [this.xCoord, this.yCoord]
+    }
+
 }
 
 class square {
@@ -76,6 +89,14 @@ class grid {
         this.ePawns.push(new pawn(5, 0, 2))
     }
 
+    getSquares() {
+        return this.squares
+    }
+
+    getSquare(x, y) {
+        return this.squares[x][y]
+    }
+
     // Player Pawns = 0,1,2
     // Enemy Pawns = 3,4,5
     printGrid() {
@@ -91,8 +112,6 @@ class grid {
                 
             }
         }
-
-
     }
 }
 
