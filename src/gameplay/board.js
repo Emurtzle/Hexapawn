@@ -15,6 +15,14 @@ class square {
         this.pawnID = pawnID
     }
 
+    getID() {
+        return this.id
+    }
+
+    getCoord() {
+        return [this.xCoord, this.yCoord]
+    }
+
     getPawn() {
         return this.pawnID
     }
