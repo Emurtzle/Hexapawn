@@ -14,6 +14,10 @@ class square {
         this.yCoord = yCoord
         this.pawnID = pawnID
     }
+
+    getPawn() {
+        return this.pawnID
+    }
 }
 
 //   Y 0 1 2 
@@ -64,8 +68,23 @@ class grid {
         this.ePawns.push(new pawn(5, 0, 2))
     }
 
-    logGrid() {
+    // Player Pawns = 0,1,2
+    // Enemy Pawns = 3,4,5
+    printGrid() {
+        let row = 0
+        let col = 0
+        let str = ""
+
         console.log("Printing Grid...")
+
+        for (row; row <= 2; row++) {
+            str = ""
+            for (col; col <=2; col++) {
+                
+            }
+        }
+
+
     }
 }
 
