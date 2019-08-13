@@ -117,10 +117,14 @@ class grid {
 
 class Board {
     constructor() {
-        // this.grid = 
+        this.grid = null
         this.win = false
         this.lose = false
         this.pTurn = true
+    }
+
+    initGrid() {
+        this.grid = new grid()
     }
 
     checkWin() {
